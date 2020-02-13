@@ -6,6 +6,14 @@ router.get('/', function(req, res, next) {
   return res.render('index', { title: 'Ana Sayfa' });
 });
 
+router.get('/register', function(req, res, next) {
+  return res.render('register', { title: 'Kayıt Ol' });
+});
+
+router.post('/register', function(req, res, next) {
+  return res.send("Regşstered");
+});
+
 // GET /about
 router.get('/delivery', function(req, res, next) {
   return res.render('delivery', { title: 'Teslimat' });

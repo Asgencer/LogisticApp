@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .main.container.row
+    .col-md-6.col-md-offset-4
+      h1.display-4.m-b-2 Kayıt İsteği Oluştur
+
+      //register form
+      form(method = 'POST' action='/register')
+
+        div.form-group
+          label(for='name') İsim:
+          input#name.form-control(type='text', placeholder='Ad-Soyad' name='name')
+        div.form-group
+          label(for='username') Kullanıcı Adı:
+          input#email.form-control(type='text', placeholder='Kullanıcı adı' name='username')
+        div.form-group
+          label(for='pw') Şifre:
+          input#pw.form-control(type='password', placeholder='***********' name='password')
+        div.form-group
+          label(for='pw2') Şifreyi Onayla:
+          input#pw2.form-control(type='password', placeholder='***********' name='confirmPassword')
+        button.btn.btn-primary(type='submit') Kayıt Talebi Oluştur
